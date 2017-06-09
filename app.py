@@ -10,12 +10,13 @@ app = Flask(__name__)
 #db = SQLAlchemy(app)
 
 @app.route('/')
-def hello():
+def index():
 	return render_template('index.html')
 
-@app.route('/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
+@app.route('/catalogue')
+def catalogue():
+    return render_template('catalogue.html')
+
 
 if __name__ == '__main__':
     app.run()
