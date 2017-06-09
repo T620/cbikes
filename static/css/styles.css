@@ -101,3 +101,46 @@ display: none;
   font-size: 1.5em;
 }
 }
+
+.main-nav{
+	margin-bottom: 5%;
+}
+
+.section-heading{
+	text-align: center;
+	padding: 5% 2%;
+}
+
+.pull-right{
+	float: right !important;
+}
+
+.catalogue-main .ui .grid{
+	/*reset the default margins */
+	margin: 0 !important;
+}
+.catalogue-grid .row{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.catalogue-grid{
+	margin: 5% 0 !important;
+}
+
+.catalogue-grid-left, .catalogue-grid-right{
+	border: .5px solid #ecf0f1;
+}
+
+.catalogue-grid-left{
+	border-left: none;
+	border-right: 0.25px solid #ecf0f1;
+}
+
+.catalogue-grid-right{
+	border-right: none;
+	border-left: 0.25px solid #ecf0f1;
+}
+
+.bike-name{
+	text-align: center;
+}

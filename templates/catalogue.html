@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8" />
+    	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    	<meta content="width=1300, initial-scale=1 user-scalable=no" 	name="viewport" />
+    	<title>Classic Motorcyles</title>
+    	<link href="{{ url_for('static', filename='semantic/dist/semantic.min.css') }}" rel="stylesheet" type="text/css" />
+
+		<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" type="text/css" />
+
+    	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	</head>
+<body class="template">
+    <div class="ui large top fixed hidden menu">
+     	<div class="ui container">
+        	<a class="item">Home</a>
+			<a class="active item">Catalogue</a>
+			<a class="right item">About</a>
+      	</div>
+    </div>
+    <!--Sidebar Menu-->
+    <div class="ui vertical sidebar menu">
+     	<a class="item">Home</a>
+		<a class="active item">Catalogue</a>
+		<a class="item">About</a>
+    </div>
+    <!--Page Contents-->
+        <div class="ui container">
+          	<div class="ui large center aligned secondary black pointing menu main-nav">
+            	<a class="toc item"><i class="sidebar icon"></i></a>
+				<a 	class="item">Home</a>
+				<a class="active item">Catalogue</a>
+      		</div>
+    	</div>
+
+	<section id="catalogue-main">
+		<div class="ui container">
+			<h1 class="section-heading">Catalogue</h1>
+			<div class="sort-menu pull-right">
+					Sort V
+				<a href="/catalogue?sortBy=Date" class="secondary button">
+					Refresh
+				</a>
+			</div>
+			<br />
+		</div>
+		<!-- close the container so the grid can be full width -->
+		<div class="ui two column grid catalogue-grid">
+			<div class="row">
+				<div class="left aligned column catalogue-grid-left">
+					<img src="{{ url_for ('static', filename='img/bikes/yamaha_sr400-left.jpg' ) }}">
+					<a href="/bike?id=0">
+						<h2 class="bike-name">Yamaha SR400</h2>
+					</a>
+				</div>
+				<div class="right aligned column catalogue-grid-right ">
+					<img src="{{ url_for ('static', filename='img/bikes/norton_commando-1974.jpg' ) }}">
+					<a href="/bike?id=1">
+						<h2 class="bike-name">Norton Commando 1974</h2>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="left aligned column catalogue-grid-left">
+					<img src="{{ url_for ('static', filename='img/bikes/yamaha_sr400-left.jpg' ) }}">
+					<a href="/bike?id=0">
+						<h2 class="bike-name">Yamaha SR400</h2>
+					</a>
+				</div>
+				<div class="right aligned column catalogue-grid-right ">
+					<img src="{{ url_for ('static', filename='img/bikes/norton_commando-1974.jpg' ) }}">
+					<a href="/bike?id=1">
+						<h2 class="bike-name">Norton Commando 1974</h2>
+					</a>
+				</div>
+			</div>
+	</div> <!--//container -->
+</div>
+</div>
+</div>
+</section>
+    <script src="{{ url_for('static', filename='semantic/dist/semantic.min.js') }}"></script>
+    <script>
+      $(document)
+        .ready(function() {
+          // fix menu when passed
+          $('.masthead')
+            .visibility({
+              once: false,
+              onBottomPassed: function() {
+                $('.fixed.menu').transition('fade in');
+              },
+              onBottomPassedReverse: function() {
+                $('.fixed.menu').transition('fade out');
+              }
+            })
+          ;
+          // create sidebar and attach to menu open
+          $('.ui.sidebar')
+            .sidebar('attach events', '.toc.item')
+          ;
+        })
+      ;
+    </script>
+  </body>
+</html>
