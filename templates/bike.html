@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8" />
+    	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    	<meta content="width=1300, initial-scale=1, user-scalable=yes" 	name="viewport" />
+    	<title>Classic Motorcyles</title>
+    	<link href="{{ url_for('static', filename='semantic/dist/semantic.min.css') }}" rel="stylesheet" type="text/css" />
+
+		<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" type="text/css" />
+
+    	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	</head>
+<body class="template">
+    <div class="ui large top fixed menu">
+     	<div class="ui container">
+			<a class="item" href="/">Home</a>
+			<a class="item" href="/catalogue">Catalogue</a>
+			<a class="item" href="/about">About</a>
+      	</div>
+    </div>
+    <!--Sidebar Menu-->
+    <div class="ui vertical sidebar menu">
+     	<a class="item" href="/">Home</a>
+		<a class="active item" href="/catalogue">Catalogue</a>
+		<a class="item" href="/about">About</a>
+    </div>
+
+<section class="bike-main mta-1">
+	<div class="ui two column stackable grid">
+		<div class="column bike-spec">
+			<div class="row">
+				<img src=" {{ url_for ('static', filename='img/bikes/yamaha_sr400-left.jpg') }}" style="width: 700px;">
+			</div>
+		</div>
+		<div class="column">
+			<div class="row bike-spec">
+				<h1 class="ui center aligned section-heading"> Bike Name </h1>
+				<div class="bike-tech-spec">
+					<h2>The Numbers</h2>
+					<ul>
+						<li>Top Speed: 76 MP/H</li>
+						<li>Weight: </li>
+						<li>Horsepower: </li>
+						<li>Torque: </li>
+						<li>Awesome Factor: 10/10</li>
+					</ul>
+					<br />
+					<h2>Description</h2>
+					<p class="mta-1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<br />
+					<a href="/catalogue" class="ui button secondary pull-left">
+						<i class="angle left icon"></i> Back
+					</a>
+					<a href="/gallery?bikeID=1" class="ui button primary pull-right"><i class="camera retro icon"></i> Gallery</a>
+				</div><!--/bike-tech-spec -->
+			</div>
+		</div>
+	</div><!--/grid -->
+</section>
+
+
+<script src="{{ url_for('static', filename='semantic/dist/semantic.min.js') }}"></script>
+<script>
+  $(document)
+	.ready(function() {
+	  // create sidebar and attach to menu open
+	  $('.ui.sidebar')
+		.sidebar('attach events', '.toc.item')
+	  ;
+	})
+  ;
+</script>
+</body>
+</html>
