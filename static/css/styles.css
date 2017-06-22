@@ -62,18 +62,6 @@ font-size: 1.33em;
 margin: 3em 0em;
 }
 
-.quote.stripe.segment {
-padding: 0em;
-}
-.quote.stripe.segment .grid .column {
-padding-top: 5em;
-padding-bottom: 5em;
-}
-
-.footer.segment {
-padding: 5em 0em;
-}
-
 .secondary.pointing.menu .toc.item {
 display: none;
 }
@@ -143,4 +131,11 @@ display: none;
 
 .bike-name{
 	text-align: center;
+}
+
+.bike-spec{
+	border:  .5px solid #ecf0f1;
+}
+.bike-tech-spec{
+	padding: 3%;
 }
