@@ -17,6 +17,9 @@ def index():
 def catalogue():
     return render_template('catalogue.html')
 
+@app.route('/bike')
+def showBike():
+	return render_template('bike.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
