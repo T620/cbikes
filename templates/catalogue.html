@@ -37,16 +37,34 @@
 	<section id="catalogue-main">
 		<div class="ui container">
 			<h1 class="section-heading">Catalogue</h1>
-			<div class="sort-menu pull-right">
-					Sort V
-				<a href="/catalogue?sortBy=Date" class="secondary button">
-					Refresh
+			<div class="pull-right text-center">
+				<div class="ui dropdown">
+  					<div class="big text">
+						Sort By
+					</div>
+  					<i class="dropdown icon"></i>
+  					<div class="menu">
+    					<div class="item">
+							Year
+						</div>
+						<div class="item">
+						 	Horsepower
+						</div>
+						<div class="item">
+							Awesome Factor
+						</div>
+					</div>
+				</div>
+				<br />
+
+				<a href="/catalogue?sortBy=Date" class="ui primary button mta-1">
+					<i class="ui refresh icon"></i> Refresh
 				</a>
 			</div>
 			<br />
-		</div>
+		</div> <!--container-->
 		<!-- close the container so the grid can be full width -->
-		<div class="ui two column grid catalogue-grid">
+		<div class="ui two column stackable grid catalogue-grid">
 			<div class="row">
 				<div class="left aligned column catalogue-grid-left">
 					<img src="{{ url_for ('static', filename='img/bikes/yamaha_sr400-left.jpg' ) }}">
@@ -101,6 +119,9 @@
             .sidebar('attach events', '.toc.item')
           ;
         })
+		$('.ui.dropdown')
+  		.dropdown()
+		;
       ;
     </script>
   </body>
